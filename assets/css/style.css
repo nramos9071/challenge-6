@@ -1,3 +1,30 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 30px;
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#aside {
+    display: flex;
+
+}
+#current-city {
+    border: 3px;
+    border-style: solid;
+    padding: 30px;
+    display: flex;
+}

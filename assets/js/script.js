@@ -99,13 +99,13 @@ function displayWeather(data) {
 
         // let 
 
-        localStorage.setItem(name, JSON.stringify(name));
+        localStorage.setItem('city', name, JSON.stringify(name));
 
         let savedCity = JSON.parse(localStorage.getItem(name));
 
         for ( let i = 0; i < name.length; i++) {
             priorCity.innerHTML = `
-            <button>${savedCity[0]}</button>
+            <button>${savedCity}</button>
             
 
              `

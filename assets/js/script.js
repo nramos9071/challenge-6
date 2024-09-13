@@ -104,7 +104,8 @@ function displayWeather(data) {
         let savedCity = JSON.parse(localStorage.getItem(name));
 
         for ( let i = 0; i < name.length; i++) {
-            priorCity.innerHTML = `
+            priorCity.innerHTML = 
+            `
             <button>${savedCity}</button>
             
 

@@ -3,7 +3,7 @@
 }
 
 body {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;;
 }
 
@@ -20,13 +20,18 @@ header {
 aside {
     display: inline-flex;
     flex-direction: column;
-    padding: 20px 20px 500px 20px;
+    width: 25%;
+    padding: 20px -1px 500px 20px;
+    
     
 }
 
 main {
     display: inline-flex;
+    width: 75%;
+    float: right;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container {
@@ -57,5 +62,18 @@ main {
     border-style: solid;
     padding: 30px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#currentweatherheader {
+    display: flex;
+
+}
+
+#currentweatherinfo {
+
+    display: flex;
+
+
+}

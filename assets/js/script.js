@@ -1,6 +1,7 @@
 const searchBtn = document.querySelector('#searchbtn');
 const priorCity = document.querySelector('#priorcity');
 let createBtn = document.createElement('button');
+// let storedCity = document.querySelector('#saved-city')
 
 
 
@@ -88,37 +89,37 @@ function displayWeather(data) {
     const { main, name, weather } = data;
     console.log(data);
     weatherDiv.innerHTML = `
+        <section id="currentweatherheader">
         <h2>Weather in ${name}</h2>
+        </section>
+        <section id="currentweatherinfo">
         <p>${weather[0].description}</p>
         <p>Temperature: ${main.temp}°F</p>
         <p>Humidity: ${main.humidity}%</p>
+        </section>
     `;
     function saveCity() {
 
-       
+        let jsonCity = JSON.stringify(name);
 
-        // let 
+        localStorage.setItem('city', jsonCity);
 
-        localStorage.setItem('city', name, JSON.stringify(name));
+        console.log(localStorage);
 
-        let savedCity = JSON.parse(localStorage.getItem(name));
+    
 
-        for ( let i = 0; i < name.length; i++) {
-            priorCity.innerHTML = 
-            `
-            <button>${savedCity}</button>
-            
-
-             `
-
-        }
-
-
-           
         
-        
-     }
+     };
+
+    function createButtons() {
+
+        let savedCity = JSON.parse(localStorage.getItem('city'));
+
+        priorCity.innerHTML = `<button id="saved-city">${savedCity}</button>`}
+
+    
     saveCity();
+    createButtons();
 
    
 };
@@ -127,10 +128,13 @@ function displayWeather(data) {
 
 searchBtn.addEventListener('click', function() {
 
+    document.querySelector('#sunrisepic').setAttribute('style','display:none');
     document.querySelector('#currentcitycontainer').setAttribute('style', 'display:flex')  
     document.querySelector('#forecastcontainer').setAttribute('style', 'display:flex') 
     getWeather();
     getForecast();
    
 });
+
+
 

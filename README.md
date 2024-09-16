@@ -10,7 +10,7 @@ Code created by Nick Ramos.
 
 ## Links
 
-Link to Weather.ly: https://nramos9071.github.io/challenge-6/
+Link to Weather dashboard: https://nramos9071.github.io/challenge-6/
 Link to repository: https://github.com/nramos9071/challenge-6
 
 ## Webpage Screenshot

@@ -1,7 +1,7 @@
 const searchBtn = document.querySelector('#searchbtn');
 const priorCity = document.querySelector('#priorcity');
 let createBtn = document.createElement('button');
-// let storedCity = document.querySelector('#saved-city')
+
 
 
 
@@ -35,12 +35,18 @@ async function getForecast() {
         }
         const data = await response.json();
         displayForecast(data);
-        console.log('working')
+        console.log('working');
         
     } catch (error) {
         document.getElementById('weather').innerText = error.message;
     }
+
+    
 }
+
+
+
+
 
 function displayForecast(data) {
     const forecastDay1Div = document.getElementById('day1');
@@ -50,6 +56,9 @@ function displayForecast(data) {
     const forecastDay5Div = document.getElementById('day5');
     const { main, name, city, list, weather } = data;
     console.log(data);
+
+
+
     forecastDay1Div.innerHTML = `
         <h2> Tomorrow </h2>
         <p> Forecast: ${list[1].weather[0].description}</p>
@@ -81,7 +90,9 @@ function displayForecast(data) {
         <p>Humidity: ${list[5].main.humidity}%</p>
     `;
 
+    
 
+    
 }
 
 function displayWeather(data) {
@@ -128,7 +139,7 @@ function displayWeather(data) {
 
 searchBtn.addEventListener('click', function() {
 
-    document.querySelector('#sunrisepic').setAttribute('style','display:none');
+    document.querySelector('#sunrisepic').setAttribute('style','display:none'); 
     document.querySelector('#currentcitycontainer').setAttribute('style', 'display:flex')  
     document.querySelector('#forecastcontainer').setAttribute('style', 'display:flex') 
     getWeather();

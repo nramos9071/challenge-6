@@ -15,4 +15,4 @@ Link to repository: https://github.com/nramos9071/challenge-6
 
 ## Webpage Screenshot
 ![Main-Page]<img src="./assets/Images/main page.png"/>
-![Working-Page]<img scr="./assets/images/working page.png"/>
+![Working-Page]<img scr="./assets/Images/working page.png"/>
